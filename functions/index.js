@@ -25,3 +25,5 @@ axios.get(url2)
       statusCode: 200,
   };
 };
+
+exports.handler = schedule("*/10 * * * *", handler);
