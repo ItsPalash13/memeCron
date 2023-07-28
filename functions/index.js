@@ -7,18 +7,18 @@ console.log("Hello");
   
 await axios.get(url)
   .then(response => {
-    console.log('HTTP request sent successfully',response.data);
+    console.log('HTTP request sent successfully 1',response.data);
   })
   .catch(error => {
-    console.error('Error sending HTTP request:', error.message);
+    console.error('Error sending HTTP request: 1', error.message);
   });
 
 await axios.get(url2)
   .then(response => {
-    console.log('HTTP request sent successfully',response.data);
+    console.log('HTTP request sent successfully 2',response.data);
   })
   .catch(error => {
-    console.error('Error sending HTTP request:', error.message);
+    console.error('Error sending HTTP request: 2', error.message);
   });
 
   return {
