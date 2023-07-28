@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { schedule } from "@netlify/functions"
 
-exports.handler = async function(event, context) {
+const handler = async function(event, context) {
   const url = 'https://memeuserserver.onrender.com/hello/';
 const url2 = 'https://memegameserver.onrender.com/hello/' // Replace this with the actual URL of the server you want to send the request to
 
