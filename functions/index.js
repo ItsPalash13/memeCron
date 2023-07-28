@@ -1,5 +1,5 @@
 import axios from 'axios';
-
+import { schedule } from "@netlify/functions"
 
 exports.handler = async function(event, context) {
   const url = 'https://memeuserserver.onrender.com/hello/';
