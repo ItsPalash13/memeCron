@@ -1,4 +1,4 @@
-import axios from 'axios';
+const axios = require('axios');
 import { schedule } from "@netlify/functions"
 
 exports.handler = async function(event, context) {
