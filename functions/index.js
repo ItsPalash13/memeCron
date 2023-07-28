@@ -1,7 +1,8 @@
-// Install axios using npm or yarn: npm install axios
-const axios = require('axios');
+import axios from 'axios';
 
-const url = 'https://memeuserserver.onrender.com/hello/';
+
+exports.handler = async function(event, context) {
+  const url = 'https://memeuserserver.onrender.com/hello/';
 const url2 = 'https://memegameserver.onrender.com/hello/' // Replace this with the actual URL of the server you want to send the request to
 
 axios.get(url)
@@ -19,3 +20,8 @@ axios.get(url2)
   .catch(error => {
     console.error('Error sending HTTP request:', error.message);
   });
+
+  return {
+      statusCode: 200,
+  };
+};
