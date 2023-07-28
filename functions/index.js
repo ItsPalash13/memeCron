@@ -1,11 +1,11 @@
 import axios from 'axios';
-import { schedule } from "@netlify/functions"
 
-const handler = async function(event, context) {
+
+exports.handler = async function(event, context) {
   const url = 'https://memeuserserver.onrender.com/hello/';
 const url2 = 'https://memegameserver.onrender.com/hello/' // Replace this with the actual URL of the server you want to send the request to
 
-axios.get(url)
+await axios.get(url)
   .then(response => {
     console.log('HTTP request sent successfully',response.data);
   })
@@ -13,7 +13,7 @@ axios.get(url)
     console.error('Error sending HTTP request:', error.message);
   });
 
-axios.get(url2)
+await axios.get(url2)
   .then(response => {
     console.log('HTTP request sent successfully',response.data);
   })
@@ -25,5 +25,3 @@ axios.get(url2)
       statusCode: 200,
   };
 };
-
-exports.handler = schedule("*/10 * * * *", handler);
