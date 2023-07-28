@@ -4,4 +4,4 @@
   node_bundler = "esbuild"
 
 [functions."index"]
-schedule = "*/14 * * * *"
+schedule = "0 0 * * * "
